@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Valentine's Day</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section class="intro" id="intro">
+    <h1 class="intro-title">Hey Shivani, will you be my valentine?</h1>
+    <div class="intro-actions">
+      <button class="yes-btn" id="yes-btn" type="button">Yes</button>
+      <button class="no-btn" id="no-btn" type="button">No</button>
+    </div>
+  </section>
+
+  <main class="card hidden" id="card">
+    <h1 class="card-title">HAPPY Valentine's DAY!!  <span class="title-heart" aria-hidden="true"></span></h1>
+
+    <section class="painting" aria-label="HEDJI!">
+      <div class="hedgehog">
+        <div class="spines"></div>
+        <div class="face">
+          <span class="eye eye-left"></span>
+          <span class="eye eye-right"></span>
+          <span class="cheek cheek-left"></span>
+          <span class="cheek cheek-right"></span>
+          <span class="nose"></span>
+          <span class="mouth"></span>
+        </div>
+        <div class="paw paw-left"></div>
+        <div class="paw paw-right"></div>
+        <div class="heart"></div>
+      </div>
+    </section>
+
+    <p class="note">Thanks for being in my life <3</p>
+    <p class="signature">S &hearts; S &bull; Feb 14, 2026</p>
+  </main>
+
+  <script>
+    const yesBtn = document.getElementById("yes-btn");
+    const noBtn = document.getElementById("no-btn");
+    const intro = document.getElementById("intro");
+    const card = document.getElementById("card");
+
+    yesBtn.addEventListener("click", () => {
+      intro.classList.add("hidden");
+      card.classList.remove("hidden");
+    });
+
+    noBtn.addEventListener("click", () => {
+      window.alert(":(");
+    });
+  </script>
+</body>
+</html>
